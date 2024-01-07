@@ -7,10 +7,20 @@
 body {
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background: #23252C;
+  height: min-content;
   justify-content: center;
+  background: #23252C;
+}
+
+.container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets and desktops: */
+  .container {
+    max-width: 320px;
+  }
 }
 
 .profile {
@@ -128,6 +138,5 @@ button:focus-visible {
   background-color: #b9b9b9;;
 }
 
-/* @media () {
 
-} */
+
