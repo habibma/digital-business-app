@@ -1,3 +1,5 @@
+@import './assets/styles/theme.scss';
+
 * {
   font-family: Inter, sans-serif;
   margin: 0;
@@ -28,14 +30,17 @@ body {
   font-weight: 700px;
   text-align: center;
 
-  color: #FFF;
+  // color: #FFF;
   margin: 20px auto 5px;
 }
 
 .profession {
   font-size: 12.8px;
   font-weight: 400;
-  color: #F3BF99;
+  // color: #F3BF99;
+  @include themed() {
+    color: t('highlight');
+  }
   text-align: center;
 
 }
@@ -43,7 +48,10 @@ body {
 .website {
   display: block;
   text-decoration: none;
-  color: #F5F5F5;
+  // color: #F5F5F5;
+  @include themed() {
+    color: t('link');
+  }
   text-align: center;
   font-size: 10.24px;
   font-weight: 400;
@@ -100,7 +108,10 @@ button:focus-visible {
 }
 
 .block-title {
-  color: #F5F5F5;
+  // color: #F5F5F5;
+  @include themed() {
+    color: t('title');
+  }
   font-size: 16px;
   font-weight: 700;
   line-height: 150%; /* 24px */
@@ -109,7 +120,7 @@ button:focus-visible {
 
 .about, .interest {
   padding: 18px 36px;
-  color: #DCDCDC;
+  // color: #DCDCDC;
   font-size: 10.24px;
   font-weight: 400;
   line-height: 150%; /* 15.36px */
@@ -134,5 +145,12 @@ button:focus-visible {
   background-color: #b9b9b9;;
 }
 
+.theme-switch {
+  position: absolute;
+  top: 15px;
+  left: 15px;
 
-
+  width: 75px;
+  padding: 3px 13px 3px 11px;
+  border-radius: 5px;
+}

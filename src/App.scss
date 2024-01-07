@@ -1,0 +1,13 @@
+@import './assets/styles/theme.scss';
+
+.container {
+  height: min-content;
+  flex-shrink: 0;
+
+  @include themed() {
+    color: t('text');
+    background: t('bg');
+  }
+
+  position: relative;
+}

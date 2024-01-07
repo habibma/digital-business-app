@@ -1,0 +1,46 @@
+$text--light: #4A4E74;
+$text--dark: #DCDCDC;
+$bg--light: #F5F5F5;
+$bg--dark: #1A1B21;
+
+$title--light: #2B283A;
+$title--dark: #F5F5F5;
+$link--light: #4A4E74;
+$link--dark: #F5F5F5;
+$highlight--light: #F47D27;
+$highlight--dark: #F3BF99;
+
+$themes: (
+        light: (
+                bg: $bg--light,
+                text: $text--light,
+                title: $title--light,
+                link: $link--light,
+                highlight: $highlight--light,
+        ),
+        dark: (
+                bg: $bg--dark,
+                text: $text--dark,
+                title: $title--dark,
+                link: $link--dark,
+                highlight: $highlight--dark,
+        ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
