@@ -1,6 +1,6 @@
 import GitHub from '../assets/github.svg'
 import Codepen from '../assets/codepen.svg'
-import Linkedin from '../assets/linkedin icon.svg'
+import Linkedin from '../assets/linkedin-icon.svg'
 import Whatsapp from '../assets/whatsapp.svg'
 
 const Footer = () => {

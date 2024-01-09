@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Profile from '../assets/profile.jpg';
-import Linkedin from '../assets/Linkedin.svg';
+import Linkedin from '../assets/linkedin.svg';
 import Mail from '../assets/Mail.svg';
 
 const Info = () =>{
@@ -12,8 +12,8 @@ const Info = () =>{
             <h2 className="profession">Frontend Developer</h2>
             <a className="website" href='https:\\habibmote.com' target='_blank'>habibmote.com</a><br />
             <section className='buttons'>
-                <a className="email" href='mailto:habib.motavassel@gmail.com'><img src={Mail} /> Email</a>
-                <a className="linkedin" href='https://www.linkedin.com/in/habib-motavassel/'><img src={Linkedin} /> LinkeIin</a>
+                <a className="email" href='mailto:habib.motavassel@gmail.com'><img src={Mail} alt='mail icon'/> Email</a>
+                <a className="linkedin" href='https://www.linkedin.com/in/habib-motavassel/'><img src={Linkedin} alt='Linkein icon' /> LinkeIin</a>
             </section>
         </div>
     )
