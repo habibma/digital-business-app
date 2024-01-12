@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Profile from '../assets/profile.jpg';
-import Linkedin from '../assets/linkedin.svg';
+import Linkedin from '../assets/Linkedin.svg';
 import Mail from '../assets/Mail.svg';
 
 const Info = () =>{
